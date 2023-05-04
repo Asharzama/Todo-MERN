@@ -1,0 +1,226 @@
+body {
+  background-color: #3f3b6c;
+}
+
+#container {
+  width: 60vw;
+  height: 90vh;
+  margin: auto;
+  margin-top: 5vh;
+  padding: 3em;
+  background: #fff8ea;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 7px 5px 15px 3px rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  color: #6b728e;
+}
+
+/* Input Section */
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  outline: none;
+  width: 70%;
+  min-width: 220px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  padding-left: 5px;
+  font-size: large;
+}
+
+#container input {
+  box-shadow: 4px 2px 10px 1px rgba(0, 0, 0, 0.9);
+  background-color: #6b728e;
+  color: white;
+}
+
+#container input::placeholder {
+  color: white;
+}
+
+.add {
+  padding: 0.25em;
+  display: inline-block;
+  border: none;
+  border-radius: 10px;
+  margin: 8px;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 4px 2px 10px 1px rgba(0, 0, 0, 0.9);
+}
+
+.add:hover {
+  background-color: #6b728e;
+  color: white;
+}
+
+.options {
+  font-size: 1rem;
+  appearance: none;
+  outline: none;
+  border: none;
+  width: 20%;
+  min-width: 100px;
+  background-color: #6b728e;
+  color: white;
+  height: 40px;
+  font-weight: 600;
+  padding-left: 0.5rem;
+  border-radius: 10px;
+  box-shadow: 4px 2px 10px 1px rgba(0, 0, 0, 0.9);
+}
+
+/* List items */
+#item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6b728e;
+  color: white;
+  margin-top: 8px;
+  border: none;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: 500;
+  padding-left: 5px;
+  min-height: 40px;
+  box-shadow: 4px 2px 10px 1px rgba(0, 0, 0, 0.9);
+}
+#item span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+
+#item button {
+  border: none;
+  margin: 6px;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 930px) {
+  #container {
+    width: 80vw;
+    padding: 2em;
+  }
+  .input-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .input-wrapper input {
+    grid-column: 1/3;
+    width: 80%;
+  }
+}
+
+@media (max-width: 627px) {
+  #container {
+    width: 90vw;
+    padding: 1em;
+  }
+  #item {
+    font-size: 12px;
+  }
+  #item button {
+    margin: 2px;
+    font-size: 0.5rem;
+  }
+}
+/* Tool Tip */
+.Edit {
+  position: relative;
+  display: inline-block;
+}
+
+.Edit .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.Edit:hover .tooltiptext {
+  visibility: visible;
+}
+
+.Delete {
+  position: relative;
+  display: inline-block;
+}
+
+.Delete .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.Delete:hover .tooltiptext {
+  visibility: visible;
+}
+
+.Checked {
+  position: relative;
+  display: inline-block;
+}
+
+.Checked .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.Checked:hover .tooltiptext {
+  visibility: visible;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3b6c;
+  border-radius: 10px;
+}
